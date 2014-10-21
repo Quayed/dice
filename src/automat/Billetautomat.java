@@ -31,7 +31,11 @@ public class Billetautomat {
 	 * Modtag nogle penge (i kroner) fra en kunde.
 	 */
 	public void indsætPenge(int beløb) {
-		balance = balance + beløb;
+		if (beløb < 0){
+			System.out.println("Afvist - beløb skal være positive!");
+		} else{
+			balance = balance + beløb;
+		}
 	}
 
 	/**
